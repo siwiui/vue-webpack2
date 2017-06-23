@@ -1,0 +1,74 @@
+.page-auth {
+  height: 100vh;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../assets/images/bg-auth.jpg')
+  background-size: cover;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(60, 200, 190, .1);
+  }
+  & * {
+    z-index: 1;
+  }
+  .panel {
+    background: white;
+    min-height: 40rem;
+    margin-top: 20vh;
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin: 2.5rem 0;
+    }
+    button {
+      margin-top: 1rem;
+      background: #35BDB2;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: .5rem;
+      outline: none;
+      padding: 1rem 2rem;
+      color: white;
+      cursor: pointer;
+      width: 82%;
+      &:hover {
+        background: darken(#35BDB2, 1%);
+        color: darken(white, 1%);
+      }
+    }
+    .field {
+      label {
+        color: #4F575B;
+        &.sent-sms {
+          position: absolute;
+          font-size: 10px;
+          top: 1.4rem;
+          right: 1.1rem;
+          border: .1rem solid #35BDB2;
+          padding: .3rem 1rem;
+          border-radius: .3rem;
+        }
+      }
+      .input {
+        width: 24rem;
+        height: 3rem;
+        outline: none;
+        border: none;
+        border-bottom: .1rem solid lighten(#A7B2B8, 20%);
+        margin: 1rem;
+        &:focus {
+          border-bottom: .1rem solid #35BDB2;
+        }
+      }
+    }
+  }
+}
